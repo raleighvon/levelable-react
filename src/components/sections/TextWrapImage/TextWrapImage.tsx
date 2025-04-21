@@ -11,18 +11,31 @@ export default function TextWrapImage({
 
   return (
     <section
-      className={`flex flex-col-reverse md:flex-row items-center gap-6 md:gap-12 ${
-        isReversed ? "md:flex-row-reverse" : ""
-      }`}
+      className={`flex flex-row`}
     >
-      <div className="w-full md:w-1/2">
-        <img
-          src={imageUrl}
-          alt={altText}
-          className="w-full h-auto rounded-lg shadow-md object-cover"
-        />
-      </div>
-      <div className="w-full md:w-1/2 text-gray-800 text-lg">{children}</div>
+      {!isReversed ? (
+        <>
+        <div className="basis-1/3 bg-red-100">
+          <img
+            src={imageUrl}
+            alt={altText}
+            className="w-full h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
+        <div className="basis-2/3 bg-blue-100">{children}</div>
+        </>
+      ) : (
+        <>
+        <div  className="basis-2/3 bg-red-100">{children}</div>
+        <div className="basis-1/3 bg-blue-100">
+          <img
+            src={imageUrl}
+            alt={altText}
+            className="w-full h-auto rounded-lg shadow-md object-cover"
+          />
+        </div>
+        </>
+      )}
     </section>
   )
 }
