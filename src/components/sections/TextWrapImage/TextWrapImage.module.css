@@ -1,0 +1,14 @@
+.textWrap {
+    
+}
+
+.image {
+    width: 250px;
+    shape-outside: circle(50%);
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem;
+}

@@ -1,8 +1,9 @@
 import { ReactNode } from "react"
 
-export interface TextWrapImageProps {
-  imageUrl: string
-  altText: string
-  imagePosition?: "left" | "right"
-  children: ReactNode
-}
+export type TextWrapImageProps = {
+  heading?: string;
+  imageUrl: string;
+  altText: string;
+  imagePosition?: "left" | "right";
+  children: ReactNode;
+};
