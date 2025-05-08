@@ -7,6 +7,7 @@ const meta: Meta<typeof TextWrapImage> = {
   component: TextWrapImage,
   tags: ["autodocs"],
   args: {
+    heading: 'Maceo the Cat',
     imageUrl: "https://via.placeholder.com/400x300",
     altText: "A placeholder image of a scenic landscape",
     children: (
